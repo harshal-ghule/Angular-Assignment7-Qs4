@@ -1,0 +1,35 @@
+<div class="container myform-align " style="text-align: center; padding-top:2em">
+
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="Name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Name}} </mat-cell>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="Price">
+      <mat-header-cell *matHeaderCellDef> Price </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Price}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="Author">
+      <mat-header-cell *matHeaderCellDef> Author </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Author}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Pages">
+      <mat-header-cell *matHeaderCellDef> Pages </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.Pages}} </mat-cell>
+    </ng-container>
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+
+
+
+</div>
